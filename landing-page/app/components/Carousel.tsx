@@ -36,6 +36,7 @@ export default function Carousel() {
                 height={230}
                 className="object-contain max-w-[90%] max-h-[90%] rounded-lg"
                 priority={idx === 0}
+                loading="lazy"
               />
             </div>
           </div>
@@ -67,6 +68,7 @@ export default function Carousel() {
             alt="Previous"
             width={30}
             height={30}
+            loading="lazy"
           />
           <span className="sr-only">Previous</span>
         </span>
@@ -83,6 +85,7 @@ export default function Carousel() {
             alt="Next"
             width={30}
             height={30}
+            loading="lazy"
           />
           <span className="sr-only">Next</span>
         </span>

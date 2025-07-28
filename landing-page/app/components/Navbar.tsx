@@ -18,6 +18,7 @@ export default function Navbar() {
                                 width={40}
                                 height={40}
                                 className="object-contain"
+                                loading="lazy"
                             />
                         </a>
                         <div className="flex flex-col">
@@ -41,6 +42,7 @@ export default function Navbar() {
                             width={32}
                             height={32}
                             className="object-contain"
+                            loading="lazy"
                         />
                     </a>
                 </div>
