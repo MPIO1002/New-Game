@@ -3,11 +3,11 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const images = [
-  "/feature-1.jpg",
-  "/feature-2.jpg",
-  "/feature-3.jpg",
-  "/feature-4.jpg",
-  "/feature-5.jpg",
+  "feature-1.jpg",
+  "feature-2.jpg",
+  "feature-3.jpg",
+  "feature-4.jpg",
+  "feature-5.jpg",
 ];
 
 export default function Carousel() {
@@ -36,13 +36,13 @@ export default function Carousel() {
             data-carousel-item={current === idx ? 'active' : undefined}
           >
             <div className="flex items-center justify-center w-full h-full">
-              <Image
+              <img
                 src={src}
                 alt={`Feature ${idx + 1}`}
                 width={400}
                 height={230}
                 className="object-contain max-w-[90%] max-h-[90%] rounded-lg"
-                {...(idx === 0 ? { priority: true } : { loading: "lazy" })}
+                loading="lazy"
               />
             </div>
           </div>
@@ -69,8 +69,8 @@ export default function Carousel() {
         aria-label="Previous"
       >
         <span className="inline-flex items-center justify-center w-10 h-10">
-          <Image
-            src="/arrow.png"
+          <img
+            src="arrow.png"
             alt="Previous"
             width={30}
             height={30}
@@ -86,8 +86,8 @@ export default function Carousel() {
         aria-label="Next"
       >
         <span className="inline-flex items-center justify-center w-10 h-10 rotate-180">
-          <Image
-            src="/arrow.png"
+          <img
+            src="arrow.png"
             alt="Next"
             width={30}
             height={30}
