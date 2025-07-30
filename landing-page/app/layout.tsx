@@ -57,7 +57,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Mộng Huyễn Giang Hồ - Mộng Đại Hiệp" />
         <meta name="twitter:description" content="Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!" />
         <meta name="twitter:image" content="https://mhgh.ggo.vn/landing/og-image.jpg" />
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <title>Mộng Huyễn Giang Hồ</title>
       </head>
       <body className={`${montserrat.variable} antialiased min-h-screen flex flex-col`}>

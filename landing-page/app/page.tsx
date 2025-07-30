@@ -1,9 +1,8 @@
-
-"use client";
-import ScrollDownButton from "./components/ScrollDownButton";
 import Image from 'next/image';
 import Heroes from "./components/Heroes";
 import Carousel from "./components/Carousel";
+import ShareButton from "./components/ShareButton";
+import ScrollDownButton from "./components/ScrollDownButton";
 
 export default function Home() {
   return (
@@ -14,8 +13,8 @@ export default function Home() {
         <div className="absolute bottom-5 left-0 right-0 p-4 text-center">
           <div className="space-y-2">
             <div className="flex justify-center">
-              <img
-                src="title-1.png"
+              <Image
+                src="/title-1.png"
                 alt="Title"
                 width={380}
                 height={120}
@@ -32,8 +31,8 @@ export default function Home() {
                 className="vibrate-2-normal cursor-pointer bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300 inline-block"
                 aria-label="Tải game"
               >
-                <img
-                  src="download.png"
+                <Image
+                  src="/download.png"
                   alt="Tải game"
                   width={380}
                   height={100}
@@ -53,8 +52,8 @@ export default function Home() {
       <section id="section1" className="h-[calc(100vh-55px)] p-2 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat w-full" style={{ backgroundImage: "url('bg-section-1.png')" }}>
         <div className="w-full flex flex-col items-center justify-center">
           <div className="flex justify-center">
-            <img
-              src="title-2.png"
+            <Image
+              src="/title-2.png"
               alt="Title 2"
               width={800}
               height={160}
@@ -64,16 +63,20 @@ export default function Home() {
             />
           </div>
           <div className="relative flex justify-center my-4 w-full" style={{ maxWidth: '100%', aspectRatio: '1/1' }}>
-            <img
-              src="heroes.png"
+            <Image
+              src="/heroes.png"
               alt="Heroes"
+              width={800}
+              height={800}
               className="object-contain w-full h-auto"
               style={{ maxWidth: '100%' }}
               loading="lazy"
             />
-            <img
-              src="main-hero.png"
+            <Image
+              src="/main-hero.png"
               alt="Main Hero"
+              width={800}
+              height={800}
               className="object-contain absolute left-0 top-0 w-full h-full z-10 pointer-events-none"
               style={{ maxWidth: '100%' }}
               loading="lazy"
@@ -87,8 +90,8 @@ export default function Home() {
               className="bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300 vibrate-2-normal cursor-pointer w-full inline-block"
               aria-label="Join"
             >
-              <img
-                src="join.png"
+              <Image
+                src="/join.png"
                 alt="Join"
                 width={400}
                 height={160}
@@ -105,8 +108,8 @@ export default function Home() {
         {/* Phần 1 */}
         <div className="w-full h-[400px] bg-cover bg-center bg-no-repeat p-4 flex gap-0" style={{ backgroundImage: "url('bg-section-2.png')" }}>
           <div className="flex-1 flex items-center justify-center">
-            <img
-              src="chest-hero.png"
+            <Image
+              src="/chest-hero.png"
               alt="Chest Hero"
               width={250}
               height={250}
@@ -116,8 +119,8 @@ export default function Home() {
             />
           </div>
           <div className="flex-1 flex flex-col items-center justify-center gap-4">
-            <img
-              src="title-3.png"
+            <Image
+              src="/title-3.png"
               alt="Title 3"
               width={200}
               height={60}
@@ -126,8 +129,8 @@ export default function Home() {
               loading="lazy"
             />
             <button className="bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300 cursor-pointer">
-              <img
-                src="button-reward.png"
+              <Image
+                src="/button-reward.png"
                 alt="Nhận thưởng"
                 width={260}
                 height={78}
@@ -142,8 +145,8 @@ export default function Home() {
         <div className="w-full h-[400px] bg-cover bg-center bg-no-repeat p-4 flex flex-col gap-0 -mt-11 z-20" style={{ backgroundImage: "url('bg-section-2.png')" }}>
           <div className="flex w-full py-5 px-5">
             <div className="flex flex-col flex-1 gap-0 justify-center pr-0">
-              <img
-                src="title-4.png"
+              <Image
+                src="/title-4.png"
                 alt="Title 4"
                 width={180}
                 height={60}
@@ -151,8 +154,8 @@ export default function Home() {
                 style={{ maxWidth: '180px' }}
                 loading="lazy"
               />
-              <img
-                src="title-5.png"
+              <Image
+                src="/title-5.png"
                 alt="Title 5"
                 width={180}
                 height={60}
@@ -162,20 +165,20 @@ export default function Home() {
               />
             </div>
             <div className="flex-1 flex items-center justify-center">
-              <img
-                src="chest.png"
-                alt="Chest"
-                width={220}
-                height={220}
-                className="object-contain w-full h-auto"
-                style={{ maxWidth: '220px', marginLeft: 0 }}
-                loading="lazy"
-              />
+            <Image
+              src="/chest.png"
+              alt="Chest"
+              width={220}
+              height={220}
+              className="object-contain w-full h-auto"
+              style={{ maxWidth: '220px', marginLeft: 0 }}
+              loading="lazy"
+            />
             </div>
           </div>
           <div className="flex justify-center items-center gap-6 mt-6">
-            <img
-              src="tiktok.png"
+            <Image
+              src="/tiktok.png"
               alt="Tiktok"
               width={180}
               height={90}
@@ -189,8 +192,8 @@ export default function Home() {
               aria-label="Facebook"
               className="inline-block"
             >
-              <img
-                src="facebook.png"
+              <Image
+                src="/facebook.png"
                 alt="Facebook"
                 width={180}
                 height={90}
@@ -204,8 +207,8 @@ export default function Home() {
       {/* Section 3 */}
       <section className="relative max-w-[430px] mx-auto w-full p-2 flex flex-col items-center justify-center bg-cover bg-no-repeat bg-top overflow-hidden -mt-10"
         style={{ backgroundImage: "url('bg-section-3.png')" }}>
-        <img
-          src="title-6.png"
+        <Image
+          src="/title-6.png"
           alt="Title 6"
           width={400}
           height={80}
@@ -216,47 +219,13 @@ export default function Home() {
         <Heroes />
 
         <div className="flex justify-center mt-20 mb-4">
-          <button
-            className="cursor-pointer bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300"
-            onClick={() => {
-              const url = encodeURIComponent(window.location.href);
-              const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-              const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-              if (isMobile) {
-                if (navigator.share) {
-                  // Mobile ưu tiên Native share API
-                  navigator.share({
-                    title: document.title,
-                    url: window.location.href,
-                  });
-                } else {
-                  // Nếu không có Native share thì mở Facebook app
-                  window.location.href = fbShareUrl;
-                }
-              } else {
-                // Desktop ưu tiên popup chia sẻ Facebook
-                window.open(fbShareUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
-              }
-            }}
-            aria-label="Chia sẻ về Facebook"
-          >
-            <img
-              src="share.png"
-              alt="share"
-              width={280}
-              height={280}
-              className="object-contain w-full h-auto"
-              style={{ maxWidth: '280px' }}
-              loading="lazy"
-            />
-          </button>
+          <ShareButton />
         </div>
 
         <div className="flex flex-col items-center justify-center w-full h-full">
           <div className="flex justify-center mb-0 mt-4">
-            <img
-              src="title-7.png"
+            <Image
+              src="/title-7.png"
               alt="Title 7"
               width={300}
               height={60}
@@ -277,8 +246,8 @@ export default function Home() {
               className="inline-block"
               aria-label="Download Now"
             >
-              <img
-                src="download-now.png"
+              <Image
+                src="/download-now.png"
                 alt="Download Now"
                 width={300}
                 height={60}

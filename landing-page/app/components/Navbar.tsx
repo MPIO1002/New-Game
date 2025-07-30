@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Navbar() {
     return (
         <nav className="fixed top-0 inset-x-0 z-50 bg-[#6b4f36]/80 shadow-lg flex justify-center py-2 px-2 mx-auto" style={{ maxWidth: '430px', width: '100%' }}>
@@ -10,8 +12,8 @@ export default function Navbar() {
                             rel="noopener noreferrer"
                             className="cursor-pointer"
                         >
-                            <img
-                                src="logo.png"
+                            <Image
+                                src="/logo.png"
                                 alt="Game Logo"
                                 width={40}
                                 height={40}
@@ -34,8 +36,8 @@ export default function Navbar() {
                         rel="noopener noreferrer"
                         className="ml-2"
                     >
-                        <img
-                            src="fb.png"
+                        <Image
+                            src="/fb.png"
                             alt="Facebook"
                             width={32}
                             height={32}
