@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { useState, useEffect } from "react";
 
 const heroes = [
@@ -67,8 +67,8 @@ export default function Heroes() {
                                 className={`rounded-full p-1 transition-all duration-300 cursor-pointer ${current === idx ? '' : 'opacity-70 hover:opacity-100'}`}
                                 onClick={() => handleSelect(idx)}
                             >
-                                <Image
-                                    src={`/` + hero.avatar}
+                                <img
+                                    src={`/landing/` + hero.avatar}
                                     alt={hero.name}
                                     width={56}
                                     height={56}
@@ -86,8 +86,8 @@ export default function Heroes() {
                                 className={`rounded-full p-1 transition-all duration-300 cursor-pointer ${current === idx + 3 ? '' : 'opacity-70 hover:opacity-100'}`}
                                 onClick={() => handleSelect(idx + 3)}
                             >
-                                <Image
-                                    src={`/` + hero.avatar}
+                                <img
+                                    src={`/landing/` + hero.avatar}
                                     alt={hero.name}
                                     width={56}
                                     height={56}
@@ -102,8 +102,8 @@ export default function Heroes() {
             {/* Main hero display centered */}
             <div className="flex flex-col items-center justify-center mx-auto">
                 <div className={`w-full flex justify-center items-center transition-transform duration-500 ${anim ? 'animate-slide-in' : ''} max-w-[400px] max-h-[400px]`} key={heroes[current].img} style={{ minHeight: '350px', height: '350px' }}>
-                    <Image
-                        src={`/` + heroes[current].img}
+                    <img
+                        src={`/landing/` + heroes[current].img}
                         alt="Hero"
                         width={430}
                         height={430}
@@ -113,8 +113,8 @@ export default function Heroes() {
                     />
                 </div>
                 <div className="-mt-15 flex justify-center w-full">
-                    <Image
-                        src={`/` + heroes[current].name}
+                    <img
+                        src={`/landing/` + heroes[current].name}
                         alt="Hero Name"
                         width={200}
                         height={40}

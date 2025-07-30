@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function ShareButton() {
   return (
     <button
@@ -26,8 +24,8 @@ export default function ShareButton() {
       }}
       aria-label="Chia sẻ về Facebook"
     >
-      <Image
-        src="/share.png"
+      <img
+        src="/landing/share.png"
         alt="share"
         width={280}
         height={280}
