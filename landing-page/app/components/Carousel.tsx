@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const images = [
   "/feature-1.jpg",
@@ -16,6 +16,13 @@ export default function Carousel() {
   const goTo = (idx: number) => setCurrent(idx);
   const prev = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   const next = () => setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [current]);
 
   return (
     <div className="relative w-full max-w-[430px] -mt-8 mx-auto" id="default-carousel">
@@ -35,8 +42,7 @@ export default function Carousel() {
                 width={400}
                 height={230}
                 className="object-contain max-w-[90%] max-h-[90%] rounded-lg"
-                priority={idx === 0}
-                loading="lazy"
+                {...(idx === 0 ? { priority: true } : { loading: "lazy" })}
               />
             </div>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const heroes = [
     {
@@ -42,6 +42,17 @@ export default function Heroes() {
             setAnim(true);
         }, 100);
     };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnim(false);
+            setTimeout(() => {
+                setCurrent((prev) => (prev === heroes.length - 1 ? 0 : prev + 1));
+                setAnim(true);
+            }, 100);
+        }, 5000);
+        return () => clearTimeout(timer);
+    }, [current]);
 
     return (
         <div className="relative w-full max-w-[430px] mx-auto min-h-[260px] flex items-center justify-center mt-5">

@@ -1,3 +1,5 @@
+
+"use client";
 import ScrollDownButton from "./components/ScrollDownButton";
 import Image from 'next/image';
 import Heroes from "./components/Heroes";
@@ -23,16 +25,22 @@ export default function Home() {
               />
             </div>
             <div className="flex justify-center mt-0 mb-15">
-              <button className="vibrate-2-normal cursor-pointer bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300">
+              <a
+                href="https://mhgh.ggo.vn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vibrate-2-normal cursor-pointer bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300 inline-block"
+                aria-label="Tải game"
+              >
                 <Image
-                src="/download.png"
-                alt="Tải game"
-                width={380}
-                height={100}
-                className="object-contain"
-                loading="lazy"
+                  src="/download.png"
+                  alt="Tải game"
+                  width={380}
+                  height={100}
+                  className="object-contain"
+                  loading="lazy"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -74,7 +82,13 @@ export default function Home() {
             />
           </div>
           <div className="flex justify-center mt-2">
-            <button className="bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300 vibrate-2-normal cursor-pointer w-full">
+            <a
+              href="https://mhgh.ggo.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300 vibrate-2-normal cursor-pointer w-full inline-block"
+              aria-label="Join"
+            >
               <Image
                 src="/join.png"
                 alt="Join"
@@ -84,7 +98,7 @@ export default function Home() {
                 style={{ maxWidth: '100%' }}
                 loading="lazy"
               />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -170,14 +184,22 @@ export default function Home() {
             className="object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
             loading="lazy"
             />
-            <Image
-            src="/facebook.png"
-            alt="Facebook"
-            width={180}
-            height={90}
-            className="object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-            />
+            <a
+              href="https://www.facebook.com/monghuyengiangho"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="inline-block"
+            >
+              <Image
+                src="/facebook.png"
+                alt="Facebook"
+                width={180}
+                height={90}
+                className="object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -194,8 +216,17 @@ export default function Home() {
           loading="lazy"
         />
         <Heroes />
+
         <div className="flex justify-center mt-20 mb-4">
-          <button className="cursor-pointer bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300">
+          <button
+            className="cursor-pointer bg-transparent p-0 border-none shadow-none hover:scale-105 transition-all duration-300"
+            onClick={() => {
+              const url = encodeURIComponent(window.location.href);
+              const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+              window.open(fbShareUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
+            }}
+            aria-label="Chia sẻ về Facebook"
+          >
             <Image
               src="/share.png"
               alt="share"
@@ -224,15 +255,23 @@ export default function Home() {
             <Carousel />
           </div>
           <div className="flex justify-center mb-40 mt-4">
-            <Image
-              src="/download-now.png"
-              alt="Download Now"
-              width={300}
-              height={60}
-              className="object-contain w-full h-auto hover:scale-110 transition-transform duration-300 cursor-pointer"
-              style={{ maxWidth: '300px' }}
-              loading="lazy"
-            />
+            <a
+              href="https://mhgh.ggo.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+              aria-label="Download Now"
+            >
+              <Image
+                src="/download-now.png"
+                alt="Download Now"
+                width={300}
+                height={60}
+                className="object-contain w-full h-auto hover:scale-110 transition-transform duration-300 cursor-pointer"
+                style={{ maxWidth: '300px' }}
+                loading="lazy"
+              />
+            </a>
           </div>
         </div>
       </section>
