@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mộng Huyễn Giang Hồ - Mộng Đại Hiệp",
     description: "Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!",
-    url: "https://mhgh-mobile-landing-page.vercel.app/",
+    url: "https://mhgh.ggo.vn/landing/",
     images: [
       {
-        url: "https://mhgh-mobile-landing-page.vercel.app/og-image.jpg",
+        url: "https://mhgh.ggo.vn/landing/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Mộng Huyễn Giang Hồ",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mộng Huyễn Giang Hồ - Mộng Đại Hiệp",
     description: "Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!",
-    images: ["https://mhgh-mobile-landing-page.vercel.app/og-image.jpg"],
+    images: ["https://mhgh.ggo.vn/landing/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -50,14 +50,14 @@ export default function RootLayout({
         <meta name="keywords" content="Mộng Huyễn Giang Hồ, game nhập vai, game mobile, MHGH, võ hiệp, quay thưởng" />
         <meta property="og:title" content="Mộng Huyễn Giang Hồ - Mộng Đại Hiệp" />
         <meta property="og:description" content="Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!" />
-        <meta property="og:image" content="https://mhgh-mobile-landing-page.vercel.app/og-image.jpg" />
-        <meta property="og:url" content="https://mhgh-mobile-landing-page.vercel.app/" />
+        <meta property="og:image" content="https://mhgh.ggo.vn/landing/og-image.jpg" />
+        <meta property="og:url" content="https://mhgh.ggo.vn/landing/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mộng Huyễn Giang Hồ - Mộng Đại Hiệp" />
         <meta name="twitter:description" content="Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!" />
-        <meta name="twitter:image" content="https://mhgh-mobile-landing-page.vercel.app/og-image.jpg" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="twitter:image" content="https://mhgh.ggo.vn/landing/og-image.jpg" />
+        <link rel="icon" href="favicon.ico" />
         <title>Mộng Huyễn Giang Hồ</title>
       </head>
       <body className={`${montserrat.variable} antialiased min-h-screen flex flex-col`}>

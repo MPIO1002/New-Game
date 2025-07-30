@@ -10,7 +10,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <div className="relative h-[calc(100vh-55px)] w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg.png')" }}>
+        style={{ backgroundImage: "url('hero-bg.png')" }}>
         <div className="absolute bottom-5 left-0 right-0 p-4 text-center">
           <div className="space-y-2">
             <div className="flex justify-center">
