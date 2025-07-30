@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-black text-white py-4 mt-auto w-full">
       <div style={{ maxWidth: '430px', margin: '0 auto', width: '100%' }} className="px-2 flex flex-row items-center justify-center">
         <div className="flex-shrink-0 flex items-center justify-center w-20">
-          <Image src="/ggo.png" alt="GGO Logo" className="w-full h-auto ml-5" loading="lazy" />
+          <img src="/landing/ggo.png" alt="GGO Logo" className="w-full h-auto ml-5" loading="lazy" />
         </div>
         <div className="flex-1 flex flex-col justify-center text-center">
           <p className="text-xs font-semibold leading-tight">

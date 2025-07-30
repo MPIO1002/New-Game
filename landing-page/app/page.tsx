@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <div className="relative h-[calc(100vh-55px)] w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('hero-bg.png')" }}>
+        style={{ backgroundImage: "url('/landing/hero-bg.png')" }}>
         <div className="absolute bottom-5 left-0 right-0 p-4 text-center">
           <div className="space-y-2">
             <div className="flex justify-center">
@@ -49,7 +49,7 @@ export default function Home() {
       </div>
 
       {/* Section 1 */}
-      <section id="section1" className="h-[calc(100vh-55px)] p-2 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat w-full" style={{ backgroundImage: "url('bg-section-1.png')" }}>
+      <section id="section1" className="h-[calc(100vh-55px)] p-2 flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat w-full" style={{ backgroundImage: "url('/landing/bg-section-1.png')" }}>
         <div className="w-full flex flex-col items-center justify-center">
           <div className="flex justify-center">
             <Image
@@ -106,7 +106,7 @@ export default function Home() {
       {/* Section 2 */}
       <section className="w-full flex flex-col justify-center -mt-10">
         {/* Phần 1 */}
-        <div className="w-full h-[400px] bg-cover bg-center bg-no-repeat p-4 flex gap-0" style={{ backgroundImage: "url('bg-section-2.png')" }}>
+        <div className="w-full h-[400px] bg-cover bg-center bg-no-repeat p-4 flex gap-0" style={{ backgroundImage: "url('/landing/bg-section-2.png')" }}>
           <div className="flex-1 flex items-center justify-center">
             <Image
               src="/chest-hero.png"
@@ -142,7 +142,7 @@ export default function Home() {
           </div>
         </div>
         {/* Phần 2 */}
-        <div className="w-full h-[400px] bg-cover bg-center bg-no-repeat p-4 flex flex-col gap-0 -mt-11 z-20" style={{ backgroundImage: "url('bg-section-2.png')" }}>
+        <div className="w-full h-[400px] bg-cover bg-center bg-no-repeat p-4 flex flex-col gap-0 -mt-11 z-20" style={{ backgroundImage: "url('/landing/bg-section-2.png')" }}>
           <div className="flex w-full py-5 px-5">
             <div className="flex flex-col flex-1 gap-0 justify-center pr-0">
               <Image
@@ -206,7 +206,7 @@ export default function Home() {
       </section>
       {/* Section 3 */}
       <section className="relative max-w-[430px] mx-auto w-full p-2 flex flex-col items-center justify-center bg-cover bg-no-repeat bg-top overflow-hidden -mt-10"
-        style={{ backgroundImage: "url('bg-section-3.png')" }}>
+        style={{ backgroundImage: "url('/landing/bg-section-3.png')" }}>
         <Image
           src="/title-6.png"
           alt="Title 6"

@@ -10,5 +10,6 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=builder /app .
+RUN chmod -R 755 /app/public
 EXPOSE 3000
 CMD ["npm", "start"]
