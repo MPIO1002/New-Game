@@ -225,17 +225,19 @@ export default function Home() {
               const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
               const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-              if (navigator.share) {
-                // Native share API
-                navigator.share({
-                  title: document.title,
-                  url: window.location.href,
-                });
-              } else if (isMobile) {
-                // Mở Facebook app (chỉ dẫn tới bài viết, không popup)
-                window.location.href = fbShareUrl;
+              if (isMobile) {
+                if (navigator.share) {
+                  // Mobile ưu tiên Native share API
+                  navigator.share({
+                    title: document.title,
+                    url: window.location.href,
+                  });
+                } else {
+                  // Nếu không có Native share thì mở Facebook app
+                  window.location.href = fbShareUrl;
+                }
               } else {
-                // Desktop mở popup
+                // Desktop ưu tiên popup chia sẻ Facebook
                 window.open(fbShareUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
               }
             }}
@@ -252,7 +254,7 @@ export default function Home() {
             />
           </button>
         </div>
-        
+
         <div className="flex flex-col items-center justify-center w-full h-full">
           <div className="flex justify-center mb-0 mt-4">
             <Image
