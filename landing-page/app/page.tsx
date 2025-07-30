@@ -223,19 +223,19 @@ export default function Home() {
             onClick={() => {
               const url = encodeURIComponent(window.location.href);
               const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-              const fbAppLink = `fb://facewebmodal/f?href=${fbShareUrl}`;
               const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-              if (isMobile) {
-                // Thử mở Facebook app bằng deep link
-                window.location.href = fbAppLink;
-
-                // Sau 1.5 giây, nếu không thành công (vì không có app), fallback
-                setTimeout(() => {
-                  window.location.href = fbShareUrl;
-                }, 1500);
+              if (navigator.share) {
+                // Native share API
+                navigator.share({
+                  title: document.title,
+                  url: window.location.href,
+                });
+              } else if (isMobile) {
+                // Mở Facebook app (chỉ dẫn tới bài viết, không popup)
+                window.location.href = fbShareUrl;
               } else {
-                // Desktop: mở popup như bình thường
+                // Desktop mở popup
                 window.open(fbShareUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
               }
             }}
@@ -252,7 +252,7 @@ export default function Home() {
             />
           </button>
         </div>
-
+        
         <div className="flex flex-col items-center justify-center w-full h-full">
           <div className="flex justify-center mb-0 mt-4">
             <Image
