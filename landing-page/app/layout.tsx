@@ -10,16 +10,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Mộng Huyễn Giang Hồ",
+  title: "Mộng Huyễn Giang Hồ - Mộng Đại Hiệp",
   description: "Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!",
   keywords: ["Mộng Huyễn Giang Hồ", "game chiến thuật", "game mobile", "MHGH", "võ hiệp", "nhận thưởng"],
   openGraph: {
-    title: "Mộng Huyễn Giang Hồ - Game Võ Hiệp",
+    title: "Mộng Huyễn Giang Hồ - Mộng Đại Hiệp",
     description: "Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!",
     url: "https://mhgh-mobile-landing-page.vercel.app/",
     images: [
       {
-        url: "https://mhgh-mobile-landing-page.vercel.app/og-image.jpg",
+        url: "https://mhgh-mobile-landing-page.vercel.app/hero-bg.png",
         width: 1200,
         height: 630,
         alt: "Mộng Huyễn Giang Hồ",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mộng Huyễn Giang Hồ - Game Võ Hiệp Quay Thưởng",
+    title: "Mộng Huyễn Giang Hồ - Mộng Đại Hiệp",
     description: "Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!",
-    images: ["https://mhgh-mobile-landing-page.vercel.app/og-image.jpg"],
+    images: ["https://mhgh-mobile-landing-page.vercel.app/hero-bg.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -48,15 +48,15 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Mộng Huyễn Giang Hồ, game nhập vai, game mobile, MHGH, võ hiệp, quay thưởng" />
-        <meta property="og:title" content="Mộng Huyễn Giang Hồ - Game Võ Hiệp Quay Thưởng" />
-        <meta property="og:description" content="Tham gia Mộng Huyễn Giang Hồ, nhận 2000 lượt quay, quà xịn, cộng đồng đông vui!" />
-        <meta property="og:image" content="https://mhgh-mobile-landing-page.vercel.app/og-image.jpg" />
+        <meta property="og:title" content="Mộng Huyễn Giang Hồ - Mộng Đại Hiệp" />
+        <meta property="og:description" content="Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!" />
+        <meta property="og:image" content="https://mhgh-mobile-landing-page.vercel.app/hero-bg.png" />
         <meta property="og:url" content="https://mhgh-mobile-landing-page.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mộng Huyễn Giang Hồ - Game Võ Hiệp Quay Thưởng" />
+        <meta name="twitter:title" content="Mộng Huyễn Giang Hồ - Mộng Đại Hiệp" />
         <meta name="twitter:description" content="Tham gia Mộng Huyễn Giang Hồ, nhận VIP7 vĩnh viễn, quà xịn, cộng đồng đông vui!" />
-        <meta name="twitter:image" content="https://mhgh-mobile-landing-page.vercel.app/og-image.jpg" />
+        <meta name="twitter:image" content="https://mhgh-mobile-landing-page.vercel.app/hero-bg.png" />
         <link rel="icon" href="/favicon.ico" />
         <title>Mộng Huyễn Giang Hồ</title>
       </head>
