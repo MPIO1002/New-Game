@@ -58,6 +58,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* End Google Tag Manager */}
 
+        {/* Meta Pixel Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1246266813394439');
+fbq('track', 'PageView');`,
+          }}
+        />
+        {/* End Meta Pixel Code */}
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Mộng Huyễn Giang Hồ, game nhập vai, game mobile, MHGH, võ hiệp, quay thưởng" />
         <meta property="og:title" content="Mộng Huyễn Giang Hồ - Mộng Đại Hiệp" />
@@ -83,6 +100,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+
+        {/* Meta Pixel Code (noscript) */}
+        <noscript>
+          <img 
+            height="1" 
+            width="1" 
+            style={{display:'none'}}
+            src="https://www.facebook.com/tr?id=1246266813394439&ev=PageView&noscript=1"
+          />
+        </noscript>
+        {/* End Meta Pixel Code (noscript) */}
 
         <div style={{ maxWidth: '430px', margin: '0 auto', width: '100%' }}>
           <Navbar />
